@@ -40,9 +40,11 @@ function Textform(props) {
         // console.log("on change");
         setText(e.target.value);
     } 
+    
+    const btnClass = "btn btn-info text-black mx-1 my-2 cursor-pointer"
 
-  return (
-   <>
+    return (
+      <>
 
 <div>
        <div className="container" style={{color: props.mode == 'dark'? 'white': 'black'}} >
@@ -59,7 +61,6 @@ function Textform(props) {
              style={{backgroundColor : props.mode === 'dark'? "grey" : '', color : props.mode === 'light'? "dark" : 'light'}}
              >
 
-            let btnClass = "btn btn-info text-black mx-1 my-2 cursor-pointer"
             
              </textarea>
             <button disabled={text.length===0} onClick={handleUpClick}  className={btnClass} >Convert to Uppercase</button>
@@ -70,13 +71,14 @@ function Textform(props) {
             </div>
         </div>
         <div className="container" style={{color : props.mode === 'light'? "dark" : 'light'}} >
-
+          <hr />
           <h2 className="text-success">Your text Sumarry: </h2>
           <p className="text-secondary mx-3" >{text.split(" ").filter((element)=>{return element.length!=0}).length} Words and {text.length} Characters!</p>
           <p className="text-secondary mx-3">{0.008 * text.split(" ").filter((element)=>{return element.length!=0}).length} minutes to Read this!</p>
+        {/* <hr /> */}
         </div>
-        <div className="container my-4 ">
-          <h3 className="text-success">Preview : </h3>
+        <div className="container my-4  border border-secondary p-2 mb-2 rounded">
+          <h3 className="text-success ">Preview : </h3>
           <p className= " fs-5 mx-3" style={{color: props.mode == 'dark'? 'white': 'black'}} >{text.length > 0? text : "Nothing to Preview here.."}</p>
         </div>
 
