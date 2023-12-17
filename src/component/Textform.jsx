@@ -77,7 +77,7 @@ function Textform(props) {
           <p className="text-secondary mx-3">{0.008 * text.split(" ").filter((element)=>{return element.length!=0}).length} minutes to Read this!</p>
         {/* <hr /> */}
         </div>
-        <div className="container my-4  border border-secondary p-2 mb-2 rounded">
+        <div className="container my-4 ">
           <h3 className="text-success ">Preview : </h3>
           <p className= " fs-5 mx-3" style={{color: props.mode == 'dark'? 'white': 'black'}} >{text.length > 0? text : "Nothing to Preview here.."}</p>
         </div>
