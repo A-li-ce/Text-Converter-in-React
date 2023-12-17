@@ -75,7 +75,7 @@ function Textform(props) {
           <h2 className="text-success">Your text Sumarry: </h2>
           <p className="text-secondary mx-3" >{text.split(" ").filter((element)=>{return element.length!=0}).length} Words and {text.length} Characters!</p>
           <p className="text-secondary mx-3">{0.008 * text.split(" ").filter((element)=>{return element.length!=0}).length} minutes to Read this!</p>
-        {/* <hr /> */}
+        <hr />
         </div>
         <div className="container my-4 ">
           <h3 className="text-success ">Preview : </h3>
