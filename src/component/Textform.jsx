@@ -59,12 +59,14 @@ function Textform(props) {
              style={{backgroundColor : props.mode === 'dark'? "grey" : '', color : props.mode === 'light'? "dark" : 'light'}}
              >
 
+            let btnClass = "btn btn-info text-black mx-1 my-2 cursor-pointer"
+            
              </textarea>
-            <button disabled={text.length===0} onClick={handleUpClick}  className="btn btn-info text-black mx-1 my-2">Convert to Uppercase</button>
-            <button disabled={text.length===0} onClick={handleLowerClick}  className="btn btn-info text-black  mx-1 my-2">Convert to LowerCase</button>
-            <button disabled={text.length===0} onClick={handleCopyClick}  className="btn btn-info text-black  mx-1 my-2">Copy to Text</button>
-            <button disabled={text.length===0} onClick={handleClearClick}  className="btn btn-info text-black  mx-1 my-2 ">Clear Text</button>
-            <button disabled={text.length===0} onClick={handleExtraSpace}  className="btn btn-info text-black  mx-1 my-2 ">Remove Extra Space</button>
+            <button disabled={text.length===0} onClick={handleUpClick}  className={btnClass} >Convert to Uppercase</button>
+            <button disabled={text.length===0} onClick={handleLowerClick}  className={btnClass} >Convert to LowerCase</button>
+            <button disabled={text.length===0} onClick={handleCopyClick}  className={btnClass} >Copy to Text</button>
+            <button disabled={text.length===0} onClick={handleClearClick}  className={btnClass} >Clear Text</button>
+            <button disabled={text.length===0} onClick={handleExtraSpace}  className={btnClass} >Remove Extra Space</button>
             </div>
         </div>
         <div className="container" style={{color : props.mode === 'light'? "dark" : 'light'}} >
